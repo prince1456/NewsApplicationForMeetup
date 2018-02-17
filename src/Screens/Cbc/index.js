@@ -22,7 +22,7 @@ class Cbc extends Component{
                         <Card style={{flex: 0}}>
                         <CardItem>
                           <Left>
-                            <Thumbnail source={{uri: items.urlToImage}} />
+                            <Thumbnail source={{uri: item.urlToImage}} />
                             <Body>
                               <Text>{item.author}</Text>
                               <Text note>{moment(item.publishedAt).format("LL")}</Text>
@@ -31,16 +31,16 @@ class Cbc extends Component{
                         </CardItem>
                         <CardItem>
                           <Body>
-                            <Image source={{uri: items.urlToImage}} style={{height: 200, width: 200, flex: 1}}/>
+                            <Image source={{uri: item.urlToImage}} style={{height: 200, width: '100%', flex: 1}}/>
                             <Text>
-                              //Your text here
+                              {item.description}
                             </Text>
                           </Body>
                         </CardItem>
                         <CardItem>
                           <Left>
                             <Button transparent textStyle={{color: '#87838B'}}>
-                              <Icon name="logo-github" />
+                              <Icon name="happy" />
                               <Text>1,926 stars</Text>
                             </Button>
                           </Left>
@@ -53,14 +53,5 @@ class Cbc extends Component{
         )
     }
 }
-    const styles = StyleSheet.create({
-        container: {
-            justifyContent: 'center',
-            alignItems: 'center',
-            flex: 1
-        },
-        homeText: {
-            fontSize: 26,
-        }
-    })
+
 export default Cbc
